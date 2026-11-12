@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Codem Solution | software, apps, systems and automation</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.desc" content="Codem Solution builds mobile apps, websites, business systems and automations. Direct contact with the developer, fixed price, reply within 24 hours.">
+<meta name="theme-color" content="#0b1f3a">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-attr="content" data-i18n="meta.ogtitle" content="Codem Solution | software for your business">
+<meta property="og:description" data-i18n-attr="content" data-i18n="meta.ogdesc" content="Apps, websites, systems and automation. Direct contact with the developer, fixed price.">
+<meta property="og:locale" data-i18n-attr="content" data-i18n="meta.locale" content="en_US">
+<!-- hreflang: двете езикови версии -->
+<link rel="alternate" hreflang="bg" href="https://codemsolution.com/">
+<link rel="alternate" hreflang="en" href="https://codemsolution.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://codemsolution.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230b1f3a%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Helvetica,Arial,sans-serif%27 font-size=%2738%27 font-weight=%27800%27 fill=%27%23ff7a1a%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================================================================
+   CODEM SOLUTION: бранд (решено 12.11.2026). Официална фирма: „СИМБИ25" ЕООД (в Контакти).
+   ЕЗИЦИ: този файл е БГ източникът. Английската версия се генерира
+   с   python3 _build_en.py   → en/index.html   (речникът е в скрипта).
+   Всеки текст с data-i18n="ключ" се превежда; без ключ — остава.
+   ================================================================ */
+:root{
+  --ink:#0b1f3a; --ink-2:#132b4d; --ink-3:#1d3a63;
+  --accent:#ff7a1a; --accent-2:#ffa057;
+  --paper:#fbfaf7; --cream:#f3efe7; --line:#e4ded3;
+  --text:#17202e; --muted:#5e6879;
+  --wrap:1180px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font:17px/1.6 Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden}
+h1,h2,h3{font-family:Sora,-apple-system,"Segoe UI",Arial,sans-serif;margin:0;line-height:1.08;letter-spacing:-.03em;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.tag{display:inline-block;font-family:Sora,sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+
+/* ---------- бутони (магнитни) ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:17px 30px;border-radius:999px;font-family:Sora,sans-serif;font-weight:700;font-size:16px;overflow:hidden;isolation:isolate;transition:color .25s;will-change:transform}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease);z-index:0}
+.btn:hover::before{transform:scaleX(1)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{color:#fff}
+.btn-line{border:2px solid var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{color:#fff;border-color:var(--accent)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent::before{background:var(--ink)}
+
+/* ---------- език ---------- */
+.lang{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:40px;padding:0 12px;border-radius:999px;border:1.5px solid var(--line);font-family:Sora,sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--ink);transition:border-color .2s,color .2s,background .2s}
+.lang:hover{border-color:var(--ink);background:#fff}
+.nav-right{display:flex;align-items:center;gap:10px}
+
+/* ---------- intro завеса ---------- */
+#intro{position:fixed;inset:0;z-index:100;background:var(--ink);display:grid;place-items:center;overflow:hidden}
+#intro .mark{display:flex;align-items:center;gap:14px;font-family:Sora,sans-serif;font-weight:800;font-size:clamp(34px,6vw,64px);color:#fff;letter-spacing:-.04em}
+#intro .mark i{width:1.48em;height:1.48em;border-radius:.34em;background:var(--accent);display:grid;place-items:center;color:var(--ink);font-style:normal;font-size:.4em;font-weight:800;line-height:1;transform:scale(0)}
+#intro .mark b{display:inline-block;overflow:hidden}
+#intro .mark b span{display:inline-block;transform:translateY(110%)}
+#intro .line{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left}
+
+/* ---------- прогрес ---------- */
+#progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:60;pointer-events:none}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+header.solid{background:rgba(251,250,247,.86);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:800;font-size:23px;color:var(--ink);letter-spacing:-.04em}
+.logo i{width:34px;height:34px;border-radius:9px;background:var(--ink);display:grid;place-items:center;color:var(--accent);font-style:normal;font-size:19px;line-height:1}
+.logo .wm{display:inline;white-space:nowrap}
+.logo small{font-weight:500;font-size:.6em;color:var(--muted);letter-spacing:.01em;margin-left:.32em}
+#intro .mark small{font-weight:500;font-size:.42em;color:rgba(255,255,255,.6);margin-left:.35em;letter-spacing:0}
+@media(max-width:400px){.logo small{display:none}}
+.nav-links{display:flex;gap:30px;font-weight:600;font-size:15px;color:var(--ink-2)}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav .btn{padding:11px 20px;font-size:14px}
+@media(max-width:860px){.nav-links{display:none}}
+@media(max-width:420px){.nav .btn{padding:10px 14px;font-size:13px}.lang{min-width:40px;padding:0 9px}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:96px 0 56px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
+.hero-bg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.hero-bg .b1{width:520px;height:520px;right:-120px;top:-100px;background:radial-gradient(circle,#ffd3b3,transparent 65%)}
+.hero-bg .b2{width:420px;height:420px;left:-140px;bottom:-120px;background:radial-gradient(circle,#cfe0ff,transparent 65%)}
+.hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%);opacity:.5}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%}
+.hero h1{font-size:clamp(34px,5.2vw,64px);font-weight:800}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l span{display:block;will-change:transform}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:clamp(16px,1.4vw,19px);color:var(--muted);max-width:50ch;margin:22px 0 0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-note{margin-top:28px;display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.hero-note b{color:var(--ink);display:block;font-family:Sora,sans-serif;font-size:15px}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:1;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint i{width:1px;height:38px;background:var(--ink);display:block;transform-origin:top;animation:hint 1.8s var(--ease) infinite}
+@keyframes hint{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding:100px 0 70px}.scroll-hint{display:none}}
+
+/* --- 3D сцена: лаптоп + телефон + плаващи чипове --- */
+.scene{position:relative;height:520px;perspective:1400px}
+.stage{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.laptop{position:absolute;left:0;right:16%;top:40px;background:#0f172a;border-radius:16px 16px 5px 5px;padding:13px 13px 0;box-shadow:0 40px 80px -24px rgba(11,31,58,.5);transform:translateZ(0)}
+.laptop::after{content:"";position:absolute;left:-4%;right:-4%;bottom:-15px;height:15px;background:#1e293b;border-radius:0 0 14px 14px}
+.screen{background:#fff;border-radius:7px;aspect-ratio:16/10;overflow:hidden;display:grid;grid-template-columns:150px 1fr}
+.screen aside{background:var(--ink);padding:16px 12px}
+.screen aside i{display:block;height:9px;border-radius:5px;background:rgba(255,255,255,.16);margin:0 0 10px}
+.screen aside i:first-child{background:var(--accent);width:62%}
+.screen main{padding:16px}
+.screen .bar{height:10px;border-radius:5px;background:#e7ebf2;margin-bottom:10px}
+.screen .bar.w{width:55%;background:#cfd6e2}
+.screen .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.screen .stats div{height:54px;border-radius:8px;background:var(--cream);border:1px solid #ece7de}
+.screen .chart{height:96px;border-radius:8px;background:linear-gradient(180deg,#fff,#f6f3ee);border:1px solid #ece7de;position:relative;overflow:hidden}
+.screen .chart svg{position:absolute;inset:0;width:100%;height:100%}
+.screen .chart path.fill{opacity:.16}
+.phone{position:absolute;right:0;bottom:0;width:40%;max-width:225px;background:#0f172a;border-radius:32px;padding:10px;box-shadow:0 40px 80px -20px rgba(11,31,58,.6);transform:translateZ(60px)}
+.phone .ps{background:#fff;border-radius:24px;aspect-ratio:9/19;padding:18px 14px;overflow:hidden}
+.phone .notch{width:40%;height:8px;border-radius:5px;background:#0f172a;margin:0 auto 16px}
+.phone .hdr{height:12px;width:60%;border-radius:6px;background:var(--ink);margin-bottom:14px}
+.phone .card{border-radius:12px;background:var(--cream);border:1px solid #ece7de;height:58px;margin-bottom:10px}
+.phone .card.a{background:var(--accent);border-color:var(--accent)}
+.phone .cta{height:40px;border-radius:10px;background:var(--ink);margin-top:14px}
+.chip{position:absolute;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px -14px rgba(11,31,58,.35);font-family:Sora,sans-serif;font-weight:700;font-size:13.5px;color:var(--ink);display:flex;align-items:center;gap:8px;white-space:nowrap;will-change:transform}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.chip.c1{left:-6%;top:6%}
+.chip.c2{right:0;top:9%}
+.chip.c3{left:8%;bottom:14%}
+.chip.c4{right:30%;top:-4%}
+@media(max-width:900px){.scene{height:400px;margin-top:8px}.chip.c1{left:0}.chip.c2{right:0}.chip.c4{display:none}}
+@media(max-width:520px){.hero h1{font-size:33px}.scene{height:320px}.screen{grid-template-columns:90px 1fr}.chip{font-size:12px;padding:8px 12px}.chip.c3{display:none}}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:#fff;overflow:hidden;padding:18px 0;border-top:3px solid var(--accent)}
+.marquee .track{display:flex;gap:0;width:max-content;animation:mq 28s linear infinite}
+.marquee span{font-family:Sora,sans-serif;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;padding:0 28px;display:flex;align-items:center;gap:28px;white-space:nowrap}
+.marquee span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- РАЗЛИКАТА ---------- */
+.why{padding:110px 0}
+.why h2{font-size:clamp(32px,4.6vw,54px);max-width:16ch}
+.diff{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.d{padding:34px 28px 34px 0;border-right:1px solid var(--line);position:relative;will-change:transform}
+.d:last-child{border-right:0}
+.d + .d{padding-left:28px}
+.d .k{font-family:Sora,sans-serif;font-weight:800;font-size:clamp(34px,4vw,48px);color:var(--accent);line-height:1;letter-spacing:-.04em}
+.d h3{font-size:21px;margin:18px 0 10px}
+.d p{margin:0;color:var(--muted);font-size:15.5px}
+@media(max-width:960px){.diff{grid-template-columns:1fr 1fr}.d{border-right:0;border-bottom:1px solid var(--line);padding-left:0 !important}.d:nth-child(odd){padding-right:28px}}
+@media(max-width:520px){.diff{grid-template-columns:1fr}.why{padding:80px 0}}
+
+/* ---------- УСЛУГИ ---------- */
+.services{background:var(--ink);color:#fff;padding:110px 0;position:relative;overflow:hidden}
+.services::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,26,.22),transparent 65%);filter:blur(40px)}
+.services h2{color:#fff;font-size:clamp(32px,4.6vw,54px)}
+.services .lead{color:#b4c0d4;font-size:19px;max-width:56ch;margin:20px 0 0}
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px;position:relative}
+.s{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:30px 26px;transition:transform .5s var(--ease),background .3s,border-color .3s;will-change:transform}
+.s:hover{transform:translateY(-8px);background:rgba(255,255,255,.07);border-color:rgba(255,160,87,.5)}
+.s .n{font-family:Sora,sans-serif;font-weight:800;font-size:15px;color:var(--accent);letter-spacing:.1em}
+.s h3{color:#fff;font-size:22px;margin:16px 0 12px}
+.s p{color:#b4c0d4;margin:0 0 18px;font-size:14.5px}
+.s ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:14.5px;color:#dbe3ef}
+.s li{padding-left:18px;position:relative}
+.s li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+@media(max-width:1100px){.svcs{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.svcs{grid-template-columns:1fr}.services{padding:80px 0}}
+
+/* ---------- ПРОЦЕС (компактен) ---------- */
+.process{padding:100px 0}
+.process h2{font-size:clamp(30px,4vw,46px)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.step{position:relative;padding-top:22px;border-top:2px solid var(--line)}
+.step::before{content:"";position:absolute;left:0;top:-2px;width:0;height:2px;background:var(--accent);transition:width .8s var(--ease)}
+.step.on::before{width:100%}
+.step i{font-family:Sora,sans-serif;font-weight:800;font-style:normal;font-size:13px;color:var(--accent);letter-spacing:.1em}
+.step h3{font-size:19px;margin:10px 0 8px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.process{padding:72px 0}}
+
+/* ---------- КОНТАКТ ---------- */
+.contact{padding:60px 0 110px}
+.cta-box{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(40px,6vw,80px);position:relative;overflow:hidden}
+.cta-box::before{content:"";position:absolute;left:-120px;bottom:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,26,.3),transparent 65%);filter:blur(30px)}
+.cta-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
+.cta-box h2{color:#fff;font-size:clamp(34px,5vw,60px);max-width:14ch}
+.cta-box .lead{color:#b4c0d4;font-size:18px;margin:18px 0 0;max-width:46ch}
+.cta-box .big{font-family:Sora,sans-serif;font-weight:700;font-size:clamp(20px,2.6vw,28px);color:#fff;display:block;margin-top:26px;transition:color .2s;word-break:break-word}
+.cta-box .big:hover{color:var(--accent)}
+.cta-box .addr{margin-top:20px;color:#b4c0d4;font-size:15px}
+.legal{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px}
+.legal h3{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.legal dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:14.5px}
+.legal dt{color:#8f9db5}.legal dd{margin:0;color:#fff}
+@media(max-width:860px){.cta-grid{grid-template-columns:1fr}.contact{padding:40px 0 80px}}
+
+footer{padding:26px 0 34px;font-size:14px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ---------- reveal начални състояния (GSAP ги анимира) ---------- */
+.rv{opacity:0;transform:translateY(28px)}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none}
+  #intro{display:none}
+  .marquee .track{animation:none}
+  .scroll-hint i{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- intro завеса -->
+<div id="intro" aria-hidden="true">
+  <div class="mark"><i>C</i><b><span>Codem<small>Solution</small></span></b></div>
+  <div class="line"></div>
+</div>
+<div id="progress"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><i>C</i><span class="wm">Codem<small>Solution</small></span></a>
+    <nav class="nav-links">
+      <a href="#why" data-i18n="nav.why">Why us</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#process" data-i18n="nav.process">How we work</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <!-- ЕЗИК: в БГ версията сочи към en/, в EN версията build-ът го обръща към ../ -->
+      <a href="../" class="lang" id="langSwitch" hreflang="bg" lang="bg" title="Български">BG</a>
+      <a href="#contact" class="btn btn-accent magnetic"><span data-i18n="nav.cta">Get a quote</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="grid"></div>
+    <div class="blob b1" data-depth="0.6"></div>
+    <div class="blob b2" data-depth="0.4"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="tag rv" data-i18n="hero.tag">Apps · websites · systems · automation</span>
+      <h1 id="h1">
+        <span class="l"><span data-i18n="hero.l1">Software for your&nbsp;business</span></span>
+        <span class="l"><span data-i18n="hero.l2">that impresses</span></span>
+        <span class="l"><span><em data-i18n="hero.l3">from the first second.</em></span></span>
+      </h1>
+      <p class="rv" data-i18n="hero.p">Like this website. Mobile apps, websites, internal systems and automations: whatever your business needs to run faster and tidier. You talk directly to the person who will build it.</p>
+      <div class="hero-actions rv">
+        <a href="#contact" class="btn btn-ink magnetic"><span data-i18n="hero.cta1">Let's talk about your idea</span></a>
+        <a href="#why" class="btn btn-line magnetic"><span data-i18n="hero.cta2">Why Codem</span></a>
+      </div>
+      <div class="hero-note rv">
+        <div><b data-i18n="hero.n1b">Within 24 hours</b><span data-i18n="hero.n1">reply to every enquiry</span></div>
+        <div><b data-i18n="hero.n2b">Fixed price</b><span data-i18n="hero.n2">before we start</span></div>
+        <div><b data-i18n="hero.n3b">iOS + Android</b><span data-i18n="hero.n3">from one codebase</span></div>
+      </div>
+    </div>
+
+    <!-- 3D сцена — реагира на мишката, плава, паралакс при скрол -->
+    <div class="scene" id="scene" aria-hidden="true">
+      <div class="stage" id="stage">
+        <div class="laptop" data-depth="0.5">
+          <div class="screen">
+            <aside><i></i><i></i><i></i><i></i><i></i><i></i></aside>
+            <main>
+              <div class="bar w"></div><div class="bar"></div>
+              <div class="stats"><div></div><div></div><div></div></div>
+              <div class="chart">
+                <svg viewBox="0 0 300 96" preserveAspectRatio="none">
+                  <path class="fill" d="M0 76 L40 62 L80 66 L120 44 L160 50 L200 26 L240 32 L300 10 L300 96 L0 96Z" fill="#ff7a1a"/>
+                  <path id="chartLine" d="M0 76 L40 62 L80 66 L120 44 L160 50 L200 26 L240 32 L300 10" fill="none" stroke="#ff7a1a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </main>
+          </div>
+        </div>
+        <div class="phone" data-depth="1.1">
+          <div class="ps">
+            <div class="notch"></div>
+            <div class="hdr"></div>
+            <div class="card a"></div><div class="card"></div><div class="card"></div>
+            <div class="cta"></div>
+          </div>
+        </div>
+        <div class="chip c1" data-depth="1.6" data-i18n="chip.1">iOS and Android</div>
+        <div class="chip c2" data-depth="2.1" data-i18n="chip.2">App store publishing</div>
+        <div class="chip c3" data-depth="1.3" data-i18n="chip.3">Website on your domain</div>
+        <div class="chip c4" data-depth="1.9" data-i18n="chip.4">Support afterwards</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint"><span data-i18n="hero.scroll">scroll</span><i></i></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span data-i18n="mq.1">Mobile apps</span><span data-i18n="mq.2">Websites</span><span data-i18n="mq.3">Business systems</span><span data-i18n="mq.4">Automation</span><span data-i18n="mq.5">Backend and integrations</span><span>App Store</span><span>Google Play</span><span data-i18n="mq.8">Support</span>
+    <span data-i18n="mq.1">Mobile apps</span><span data-i18n="mq.2">Websites</span><span data-i18n="mq.3">Business systems</span><span data-i18n="mq.4">Automation</span><span data-i18n="mq.5">Backend and integrations</span><span>App Store</span><span>Google Play</span><span data-i18n="mq.8">Support</span>
+  </div>
+</div>
+
+<!-- ================= ЗАЩО НИЕ ================= -->
+<section class="why" id="why">
+  <div class="wrap">
+    <span class="tag rv" data-i18n="why.tag">Why Codem Solution</span>
+    <h2 class="rv" data-i18n="why.h2">Four things big agencies can't promise you.</h2>
+
+    <div class="diff">
+      <div class="d rv"><div class="k">01</div><h3 data-i18n="why.1h">You talk to the developer</h3><p data-i18n="why.1p">Not to a sales manager. The person answering your email is the one who will write the code. No “I'll pass it on to the team”.</p></div>
+      <div class="d rv"><div class="k">02</div><h3 data-i18n="why.2h">The price is fixed</h3><p data-i18n="why.2p">We state it before the start, in writing, and it doesn't change halfway. No billable hours, no surprises at the end.</p></div>
+      <div class="d rv"><div class="k">03</div><h3 data-i18n="why.3h">Reply within 24 hours</h3><p data-i18n="why.3p">To every enquiry, to every note on the project. Ask on Monday, you have an answer on Tuesday.</p></div>
+      <div class="d rv"><div class="k">04</div><h3 data-i18n="why.4h">Support doesn't end</h3><p data-i18n="why.4p">After launch we stay around for updates, new features and questions. We don't hand over the project and disappear.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= УСЛУГИ ================= -->
+<section class="services" id="services">
+  <div class="wrap">
+    <span class="tag rv" data-i18n="svc.tag">What we do</span>
+    <h2 class="rv" data-i18n="svc.h2">Whatever you need. All the way.</h2>
+    <p class="lead rv" data-i18n="svc.lead">An app, a website, a system or an automation. From the idea to launch, without passing you on to third parties.</p>
+
+    <div class="svcs">
+      <article class="s rv">
+        <div class="n">01</div>
+        <h3 data-i18n="svc.1h">Mobile apps</h3>
+        <p data-i18n="svc.1p">For iOS and Android from one codebase. We handle publishing too, including Apple's review, where most apps get rejected.</p>
+        <ul><li data-i18n="svc.1a">Subscriptions and payments</li><li data-i18n="svc.1b">Notifications and profiles</li><li data-i18n="svc.1c">App Store and Google Play</li></ul>
+      </article>
+      <article class="s rv">
+        <div class="n">02</div>
+        <h3 data-i18n="svc.2h">Websites</h3>
+        <p data-i18n="svc.2p">Fast, on your own domain, looking good on a phone. Plus a Google Business profile so people find you locally.</p>
+        <ul><li data-i18n="svc.2a">Own domain and email</li><li data-i18n="svc.2b">Google Business and SEO basics</li><li data-i18n="svc.2c">Monthly maintenance</li></ul>
+      </article>
+      <article class="s rv">
+        <div class="n">03</div>
+        <h3 data-i18n="svc.3h">Business systems</h3>
+        <p data-i18n="svc.3p">Your own software for clients, orders, stock, schedules and reports. A backend that keeps everything in one place, built around how you actually work.</p>
+        <ul><li data-i18n="svc.3a">CRM, orders, inventory</li><li data-i18n="svc.3b">Team roles, from phone and desktop</li><li data-i18n="svc.3c">Reports that build themselves</li></ul>
+      </article>
+      <article class="s rv">
+        <div class="n">04</div>
+        <h3 data-i18n="svc.4h">Automation</h3>
+        <p data-i18n="svc.4p">Repetitive work done by itself. We connect the tools you already use so data flows without manual copying.</p>
+        <ul><li data-i18n="svc.4a">Invoices, emails and spreadsheets, automatically</li><li data-i18n="svc.4b">Links between software and platforms</li><li data-i18n="svc.4c">Alerts when something needs attention</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПРОЦЕС ================= -->
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="tag rv" data-i18n="proc.tag">How we work</span>
+    <h2 class="rv" data-i18n="proc.h2">Four steps. Not a single surprise.</h2>
+    <div class="steps">
+      <div class="step rv"><i>01</i><h3 data-i18n="proc.1h">Conversation</h3><p data-i18n="proc.1p">You tell us. We say honestly what's realistic.</p></div>
+      <div class="step rv"><i>02</i><h3 data-i18n="proc.2h">Quote</h3><p data-i18n="proc.2p">Price and deadline in writing, before you pay anything.</p></div>
+      <div class="step rv"><i>03</i><h3 data-i18n="proc.3h">Development</h3><p data-i18n="proc.3p">You see progress along the way. Changes are part of the job.</p></div>
+      <div class="step rv"><i>04</i><h3 data-i18n="proc.4h">Launch</h3><p data-i18n="proc.4p">We publish, hand over, and stay around.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КОНТАКТ ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <div class="cta-grid">
+        <div>
+          <span class="tag" data-i18n="ct.tag">Contact</span>
+          <h2 data-i18n="ct.h2">Tell us your idea.</h2>
+          <p class="lead" data-i18n="ct.lead">We reply within one working day, with questions or straight away with an indicative price. We work with clients in Bulgaria and abroad.</p>
+          <!-- ПОПЪЛНИ: имейл и телефон -->
+          <a class="big" href="mailto:office@codemsolution.com">office@codemsolution.com</a>
+          <!-- ТЕЛЕФОН: върни реда с истинския номер
+          <a class="big" href="tel:+359XXXXXXXXX">+359 XXX XXX XXX</a> -->
+          <div class="addr" data-i18n="ct.addr">82 Ivaylo St., Odesos, Varna, Bulgaria</div>
+        </div>
+        <aside class="legal">
+          <h3 data-i18n="legal.h">Company details</h3>
+          <dl>
+            <dt data-i18n="legal.firm">Company</dt><dd data-i18n="legal.firmv">SIMBI25 EOOD (Ltd.)</dd>
+            <dt data-i18n="legal.eik">Company ID (EIK)</dt><dd>208966434</dd>
+            <dt data-i18n="legal.seat">Registered office</dt><dd data-i18n="legal.seatv">82 Ivaylo St., Odesos, 9000 Varna, Bulgaria</dd>
+            <dt data-i18n="legal.mgr">Managing director</dt><dd data-i18n="legal.mgrv">Monyo Monev</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y">2026</span> Codem Solution · <span data-i18n="foot.firm">SIMBI25 EOOD · Company ID 208966434</span></span>
+    <span data-i18n="foot.loc">Varna, Bulgaria</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine    = window.matchMedia('(pointer: fine)').matches;   // мишка (не тъч)
+  var hasGsap = typeof gsap !== 'undefined';
+
+  /* ---- fallback: ако GSAP не се зареди или reduced-motion — всичко се показва веднага ---- */
+  function showAll(){
+    document.body.classList.remove('locked');
+    var intro = document.getElementById('intro'); if(intro) intro.remove();
+    document.querySelectorAll('.rv').forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+    document.querySelectorAll('#h1 .l span').forEach(function(el){ el.style.transform='none'; });
+    document.querySelectorAll('.step').forEach(function(el){ el.classList.add('on'); });
+  }
+  if(!hasGsap || reduced){ showAll(); return; }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ЗАЩИТА: ако по каквато и да е причина intro-то не завърши до 4.5s
+     (фонов таб, спрян rAF, бавна машина) — показваме всичко принудително. */
+  var introDone = false;
+  setTimeout(function(){ if(!introDone){ try{ tl.kill(); }catch(e){} showAll(); ScrollTrigger.refresh(); } }, 4500);
+
+  /* ======================= 1) INTRO ======================= */
+  var tl = gsap.timeline({
+    defaults:{ease:'power4.out'},
+    onComplete:function(){ introDone=true; var i=document.getElementById('intro'); if(i) i.remove(); document.body.classList.remove('locked'); ScrollTrigger.refresh(); }
+  });
+  tl.to('#intro .mark i',   {scale:1, duration:.55, ease:'back.out(2)'}, .1)
+    .to('#intro .mark span',{y:0, duration:.7}, .3)
+    .to('#intro .line',     {scaleX:1, duration:.7, ease:'power2.inOut'}, .5)
+    .to('#intro',           {yPercent:-100, duration:.9, ease:'power4.inOut'}, 1.25)
+    .to('#h1 .l span',      {y:0, duration:1, stagger:.09}, 1.45)
+    .to('.hero .rv',        {opacity:1, y:0, duration:.9, stagger:.08}, 1.7)
+    .from('#stage',         {y:60, scale:.92, opacity:0, duration:1.2}, 1.55)
+    .from('.chip',          {scale:0, opacity:0, duration:.7, stagger:.08, ease:'back.out(1.8)'}, 2.0)
+    .from('#chartLine',     {strokeDasharray:600, strokeDashoffset:600, duration:1.4, ease:'power2.inOut'}, 2.1);
+
+  /* ======================= 2) HERO — живот ======================= */
+  gsap.set('.chip', {z:90});   /* чиповете най-отпред в 3D сцената, пред телефона (z:60) */
+  gsap.to('.laptop', {y:-8, duration:3.2, yoyo:true, repeat:-1, ease:'sine.inOut'});
+  gsap.to('.phone',  {y:-14, duration:2.6, yoyo:true, repeat:-1, ease:'sine.inOut', delay:.4});
+  gsap.utils.toArray('.chip').forEach(function(c,i){
+    gsap.to(c, {y:(i%2?-10:10), duration:2.2+i*.3, yoyo:true, repeat:-1, ease:'sine.inOut', delay:i*.2});
+  });
+
+  if(fine){
+    var stage = document.getElementById('stage');
+    var layers = gsap.utils.toArray('[data-depth]');
+    var qx = gsap.quickTo(stage,'rotationY',{duration:.8,ease:'power3'});
+    var qy = gsap.quickTo(stage,'rotationX',{duration:.8,ease:'power3'});
+    var hero = document.querySelector('.hero');
+    hero.addEventListener('mousemove', function(e){
+      var r = hero.getBoundingClientRect();
+      var nx = (e.clientX - r.left)/r.width - .5;
+      var ny = (e.clientY - r.top)/r.height - .5;
+      qx(nx*14); qy(-ny*10);
+      layers.forEach(function(el){
+        var d = parseFloat(el.getAttribute('data-depth'))||1;
+        gsap.to(el, {x:nx*22*d, duration:.9, ease:'power3', overwrite:'auto'});
+      });
+    });
+    hero.addEventListener('mouseleave', function(){
+      qx(0); qy(0);
+      layers.forEach(function(el){ gsap.to(el,{x:0,duration:1.2,ease:'power3'}); });
+    });
+  }
+
+  gsap.to('.hero-copy', {y:-80, ease:'none', scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('#scene',     {y:-40, scale:.94, ease:'none', scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-bg .b1',{y:120, ease:'none', scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-bg .b2',{y:-90, ease:'none', scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+  /* ======================= 3) СКРОЛ — секции ======================= */
+  gsap.utils.toArray('section:not(.hero)').forEach(function(sec){
+    var items = sec.querySelectorAll('.rv');
+    if(!items.length) return;
+    gsap.to(items, {opacity:1, y:0, duration:1, stagger:.1, ease:'power3.out',
+      scrollTrigger:{trigger:sec, start:'top 72%', once:true}});
+  });
+  gsap.utils.toArray('.step').forEach(function(st,i){
+    ScrollTrigger.create({trigger:st, start:'top 80%', once:true, onEnter:function(){ setTimeout(function(){ st.classList.add('on'); }, i*160); }});
+  });
+  gsap.from('.svcs .s', {rotationX:-12, transformOrigin:'top center', duration:1.1, stagger:.12, ease:'power3.out',
+    scrollTrigger:{trigger:'.svcs', start:'top 75%', once:true}});
+
+  /* ======================= 4) UI ======================= */
+  gsap.to('#progress', {scaleX:1, ease:'none', scrollTrigger:{trigger:document.body, start:'top top', end:'bottom bottom', scrub:.3}});
+  ScrollTrigger.create({start:80, onUpdate:function(self){ document.getElementById('hdr').classList.toggle('solid', self.scroll()>80); }});
+  if(fine){
+    document.querySelectorAll('.magnetic').forEach(function(b){
+      var mx = gsap.quickTo(b,'x',{duration:.4,ease:'power3'}), my = gsap.quickTo(b,'y',{duration:.4,ease:'power3'});
+      b.addEventListener('mousemove', function(e){
+        var r=b.getBoundingClientRect();
+        mx((e.clientX-(r.left+r.width/2))*.28); my((e.clientY-(r.top+r.height/2))*.28);
+      });
+      b.addEventListener('mouseleave', function(){ mx(0); my(0); });
+    });
+  }
+})();
+</script>
+</body>
+</html>
