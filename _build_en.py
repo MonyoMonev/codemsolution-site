@@ -134,10 +134,6 @@ EN.update({
   "proc.4p": "We publish the product, show your team how to use it and take over the maintenance.",
   "proc.4g": "A finished product and maintenance",
   "tech.tag": "Technology",
-  "tech.h2": "We work with proven technology.",
-  "tech.p": "We choose widely used technologies with long term support, so your product can keep growing for years.",
-  "tech.g1": "Mobile apps", "tech.g2": "Systems and websites", "tech.g3": "Data and server", "tech.g4": "Integrations",
-  "tech.i1": "Payments", "tech.i2": "Maps and location", "tech.i3": "Email and notifications", "tech.i4": "Sign in with Google and Apple",
   "faq.tag": "Questions",
   "faq.h2": "Frequently asked questions.",
   "faq.q1": "How much does a project cost?",
@@ -154,6 +150,72 @@ EN.update({
   "faq.a6": "Yes. Conversations and reviews of the work happen online, and we meet in person when needed.",
   "faq.q7": "What happens after launch?",
   "faq.a7": "We take over the maintenance: we keep the product running, update it and add new features when you need them. The terms are agreed together with the project.",
+})
+
+# --- 12.11.2026: детайлни екрани, „Възможности“, форма за запитване ---
+EN.update({
+  # системата в лаптопа
+  "dash.g1": "Main", "dash.g2": "Management", "dash.n5": "Reports", "dash.n6": "Invoices", "dash.n7": "Team", "dash.n8": "Settings",
+  "dash.ui": "MK", "dash.u1": "Maria Koleva", "dash.search": "Search by order, customer or product", "dash.today": "This week",
+  "dash.k1s": "+6 since yesterday", "dash.k4": "Delivered on time",
+  "dash.lg1": "This week", "dash.lg2": "Last week", "dash.t1": "Day", "dash.t2": "Week", "dash.t3": "Month",
+  "dash.all": "View all", "dash.sh": "Low stock", "dash.sall": "Open stock", "dash.ph": "Payments", "dash.th": "Tasks for today",
+  "in.1": "IP", "in.2": "MK", "in.3": "GD", "in.4": "ES", "in.5": "PN", "nm.5": "Petar Nikolov",
+  "sk.1": "Coffee beans, 1 kg", "sk.2": "Paper cups, 250 ml", "sk.3": "Filters, 100 pcs",
+  "pm.1": "Card", "pm.2": "Cash", "pm.3": "Bank transfer",
+  "tk.1": "Confirm the new orders", "tk.2": "Issue this week's invoices", "tk.3": "Order stock from the supplier",
+  # приложението в телефона
+  "app.in": "MK", "app.paid": "Paid by card", "app.eta": "Arriving in 6 min", "app.dist": "1.2 km from you",
+  "app.sub": "Pro subscription", "app.subs": "Active until 12 December", "app.subb": "Manage",
+  "app.today": "Today", "app.r1": "Nikolay, beard and haircut", "app.r1s": "Pays on site", "app.r2": "Petar, haircut", "app.r2s": "Paid by card",
+  # сайтът в браузъра
+  "br.l4": "Pricing", "br.l5": "About", "br.cta": "Book a visit", "br.rev": "Google reviews", "br.btn2": "See our services",
+  "br.fl1": "Booked for 14:00", "br.fl2": "5 minutes from the centre", "br.f3": "Works on mobile",
+  "br.sh": "Services and prices", "br.s1": "Consultation", "br.s2": "Standard service", "br.s3": "Full package",
+  "br.g0": "How Google shows you", "br.g2": "Your company | Services and prices", "br.g3": "Opening hours, address and online booking.",
+  # надписите в сцената
+  "cs.t1": "Live orders", "cs.t2": "Roles and access", "cs.t3": "Reports", "cs.t4": "Pricing rules", "cs.t5": "Automatic notifications",
+  "ca.t1": "Payments and subscriptions", "ca.t2": "Maps and location", "ca.t3": "Notifications", "ca.t4": "Chat", "ca.t5": "Sign in with Google and Apple",
+  "cw.p": "A custom designed website on your own domain. It loads fast, reads well on a phone and is ready for Google from day one.",
+  "cw.t1": "Custom design", "cw.t2": "Search optimisation", "cw.t3": "Fast loading", "cw.t4": "Domain and email", "cw.t5": "Google profile",
+  "cu.t1": "Invoices", "cu.t2": "Emails", "cu.t3": "Reports", "cu.t4": "Reminders", "cu.t5": "Connected tools",
+  # възможности
+  "can.tag": "Capabilities", "can.h2": "What we can build for you.",
+  "can.p": "These are some of the solutions we have already built. If your task is not on the list, tell us about it.",
+  "can.sh": "Business systems", "can.ah": "Mobile apps", "can.wh": "Websites",
+  "can.s1": "Live dashboard", "can.s1d": "New orders appear instantly and are assigned to the right employee.",
+  "can.s2": "Rule based pricing", "can.s2d": "The price is calculated automatically by city, tariff and type of service.",
+  "can.s3": "One system for many companies", "can.s3d": "Each company works with its own data, prices and logo on a shared platform.",
+  "can.s4": "Roles and access rights", "can.s4d": "Managers, employees and customers see and do different things.",
+  "can.s5": "Scheduled tasks and reminders", "can.s5d": "The system sends notifications and runs actions on its own, right on time.",
+  "can.s6": "Reports and statistics", "can.s6d": "Revenue, orders and workload by period, employee and customer.",
+  "can.s7": "Listing and enquiry platforms", "can.s7d": "A catalogue, search with filters and tracking of every enquiry through its stages.",
+  "can.s8": "Connections to external services", "can.s8d": "Payments, maps, email and the tools you already work with.",
+  "can.a1": "Payments and subscriptions", "can.a1d": "One time purchases and monthly plans through the App Store and Google Play.",
+  "can.a2": "Live maps and location", "can.a2d": "Addresses, routes and movement on a map, updated in real time.",
+  "can.a3": "Notifications", "can.a3d": "Reminders and messages that reach the right user at the right moment.",
+  "can.a4": "Live chat", "can.a4d": "Conversations between customers and staff inside the app.",
+  "can.a5": "Sign in with Google and Apple", "can.a5d": "Registration with one tap and no new password.",
+  "can.a6": "Calendar and bookings", "can.a6d": "Free slots, reservations and a reminder before the appointment.",
+  "can.a7": "Apple Health connection", "can.a7d": "Steps, weight and workouts straight from the phone.",
+  "can.a8": "AI assistant", "can.a8d": "Answers users' questions inside the app.",
+  "can.w1": "Custom design", "can.w1d": "Built for your company, with no ready made templates.",
+  "can.w2": "Search optimisation", "can.w2d": "Titles, descriptions, structured data and a sitemap submitted to Search Console.",
+  "can.w3": "Fast loading", "can.w3d": "Optimised images and code with no unnecessary libraries.",
+  "can.w4": "Comfortable on every screen", "can.w4d": "Looks and works well on a phone, a tablet and a computer.",
+  "can.w5": "Company profile on Google", "can.w5d": "Map, opening hours and reviews, so nearby customers can find you.",
+  "can.w6": "Domain, certificate and company email", "can.w6d": "We set everything up and you get a ready address in your own name.",
+  "can.w7": "Several languages", "can.w7d": "A separate version for each language that Google recognises correctly.",
+  "can.w8": "Animations and seasonal campaigns", "can.w8d": "Scroll effects and separate pages for promotions.",
+  # запитване
+  "ct.btn": "Send an enquiry",
+  "inq.tag": "Enquiry", "inq.h": "Tell us about your project.", "inq.p": "Fill in a few lines and we will get back to you within one working day.",
+  "inq.what": "What do you need", "inq.w1": "Business system", "inq.w2": "Mobile app", "inq.w3": "Website", "inq.w4": "Automation", "inq.w5": "Not sure yet",
+  "inq.name": "Name", "inq.co": "Company", "inq.mail": "Email", "inq.tel": "Phone", "inq.msg": "Briefly about the project",
+  "inq.req": "Please fill in your name, a valid email and a few words about the project.",
+  "inq.err": "The enquiry could not be sent. Write to us or call:",
+  "inq.send": "Send the enquiry", "inq.note": "We use your details only to reply to your enquiry.",
+  "inq.okh": "Thank you.", "inq.okp": "We have received your enquiry and will get back to you within one working day.", "inq.close": "Close",
 })
 
 TAGS = "title|a|span|p|h1|h2|h3|h4|li|div|b|em|dt|dd"
@@ -210,6 +272,7 @@ def build():
     else:
         missing.append("HEAD: ld description")
 
+    s = s.replace('aria-label="Затвори"', 'aria-label="Close"')
     # страницата с фирмените данни: в EN версията е en/company/
     s = s.replace('href="firma/"', 'href="company/"', 1)
 
