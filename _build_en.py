@@ -247,7 +247,8 @@ def build():
     s = re.sub(r'(<(?:%s)\b[^>]*\bdata-i18n="([^"]+)"[^>]*>)([^<]*)(</(?:%s)>)' % (TAGS, TAGS), text_sub, s)
 
     # 3) език на документа и бутонът за език
-    s = s.replace('<html lang="bg">', '<html lang="en">', 1)
+    assert '<html lang="bg" class="no-motion">' in s
+    s = s.replace('<html lang="bg" class="no-motion">', '<html lang="en" class="no-motion">', 1)
     s = s.replace('<a href="en/" class="lang" id="langSwitch" hreflang="en" lang="en" title="English">EN</a>',
                   '<a href="../" class="lang" id="langSwitch" hreflang="bg" lang="bg" title="Български">BG</a>', 1)
 
