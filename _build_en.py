@@ -218,6 +218,77 @@ EN.update({
   "inq.okh": "Thank you.", "inq.okp": "We have received your enquiry and will get back to you within one working day.", "inq.close": "Close",
 })
 
+# --- 17.11.2026: помощният чат (дърво от готови въпроси; текстовете са в <template id="cbT">) ---
+EN.update({
+  "cb.launch": "Tell us what you need", "cb.who": "Codem Solution assistant", "cb.sub": "A few short questions",
+  "cb.start.note": "It takes about a minute. You leave your name and email at the end.",
+  "cb.aria": "Chat assistant", "cb.back": "Back", "cb.next": "Continue", "cb.next.n": "Continue with {n} selected",
+  "cb.skip": "Skip", "cb.typing": "Typing",
+  "cb.sum.tag": "What we noted", "cb.sum.go": "Leave your contact details", "cb.sum.edit": "Change something",
+  "cb.form.say": "Leave your name and email and we will get back to you within one working day.",
+  "cb.req": "Please fill in your name and a valid email.",
+  "cb.done.h": "Thank you, {name}.", "cb.done.new": "New enquiry",
+  # първият въпрос
+  "cb.q.start": "Hello! What do you need?",
+  "cb.o.system": "Business system", "cb.o.app": "Mobile app", "cb.o.site": "Website", "cb.o.auto": "Automation",
+  "cb.o.support": "Support for an existing product", "cb.o.ask": "I just have a question",
+  "cb.o.other": "Something else", "cb.o.unsure": "Not sure yet",
+  # фирмена система
+  "cb.q.sys.state": "Do you need a new system or a rework of the current one?",
+  "cb.o.sys.new": "A new system", "cb.o.sys.redo": "A rework of the current one",
+  "cb.q.sys.manage": "What should it manage? You can pick several.",
+  "cb.o.m.orders": "Orders", "cb.o.m.customers": "Customers", "cb.o.m.stock": "Stock", "cb.o.m.invoices": "Invoices and payments",
+  "cb.o.reports": "Reports", "cb.o.m.team": "Team and schedules", "cb.o.m.links": "Connections to other tools",
+  # мобилно приложение
+  "cb.q.app.state": "Is it a new app, or do you already have one?",
+  "cb.o.app.new": "A new app", "cb.o.app.redo": "Changes to an existing app", "cb.o.app.idea": "Just an idea for now",
+  "cb.q.app.platform": "For which phones?",
+  "cb.o.p.both": "iPhone and Android", "cb.o.p.ios": "iPhone only", "cb.o.p.android": "Android only",
+  "cb.q.app.features": "What should it include? You can pick several.",
+  "cb.o.f.pay": "Payments and subscriptions", "cb.o.f.maps": "Maps and location", "cb.o.f.push": "Notifications", "cb.o.f.chat": "Chat",
+  "cb.o.booking": "Bookings", "cb.o.f.login": "Sign in with Google and Apple",
+  # сайт
+  "cb.q.site.state": "Do you need a new website or a redesign of the current one?",
+  "cb.o.site.new": "A new website", "cb.o.site.redo": "A redesign of the current one",
+  "cb.q.site.kind": "What kind of website?",
+  "cb.o.k.company": "Company presentation", "cb.o.k.shop": "Online shop", "cb.o.k.catalog": "Listings catalogue",
+  "cb.q.site.have": "What do you already have? You can pick several.",
+  "cb.o.h.logo": "Logo", "cb.o.h.texts": "Texts", "cb.o.h.photos": "Photos", "cb.o.h.design": "A finished design", "cb.o.h.domain": "Domain",
+  "cb.o.h.none": "Nothing yet",
+  # автоматизация
+  "cb.q.auto.what": "What should happen automatically? You can pick several.",
+  "cb.o.a.invoices": "Invoices", "cb.o.a.emails": "Emails to customers", "cb.o.a.reminders": "Reminders", "cb.o.a.links": "Connected tools",
+  "cb.q.auto.tools": "What do you work with today?",
+  "cb.o.t.sheets": "Excel or Google spreadsheets", "cb.o.t.ready": "Off the shelf software", "cb.o.t.own": "Our own system",
+  "cb.o.t.hand": "Everything is done by hand",
+  # поддръжка
+  "cb.q.sup.product": "What needs support?",
+  "cb.q.sup.help": "What do you need? You can pick several.",
+  "cb.o.s.fix": "Fixing a problem", "cb.o.s.features": "New features", "cb.o.s.updates": "Updates and security", "cb.o.s.monthly": "Ongoing maintenance",
+  "cb.q.sup.access": "Do you have access to the code and the accounts?",
+  "cb.o.yes": "Yes", "cb.o.partly": "Partly", "cb.o.no": "No", "cb.o.dunno": "I don't know",
+  "cb.q.sup.urgent": "How urgent is it?",
+  "cb.o.u.now": "It is urgent", "cb.o.u.month": "Within a month", "cb.o.u.calm": "Not urgent",
+  # само въпрос
+  "cb.q.ask.topic": "What would you like to ask?", "cb.o.ask.other": "I will write my question",
+  "cb.q.ask.more": "If you would like us to go into detail for your case, write it here.",
+  "cb.q.ask.q": "Write your question and we will answer within one working day.",
+  "cb.ph.ask": "Your question",
+  # общи
+  "cb.q.when": "When do you need it?",
+  "cb.o.w.asap": "As soon as possible", "cb.o.w.3m": "Within three months", "cb.o.w.6m": "Within six months", "cb.o.w.open": "No fixed deadline",
+  "cb.q.how": "How would you prefer to start?",
+  "cb.o.how.core": "With the essentials, then build on it", "cb.o.how.full": "With everything at once", "cb.o.how.advice": "We would like your advice",
+  "cb.say.price": "Every project is different, so the price is agreed based on the scope. After the first conversation you get a written quote with a fixed price and deadline.",
+  "cb.q.note": "Is there anything important we should know? Tell us in your own words.",
+  "cb.ph.note": "For example, what your company does",
+  # етикетите в обобщението
+  "cb.l.state": "Project", "cb.l.product": "Product", "cb.l.kind": "Type", "cb.l.platform": "Phones", "cb.l.manage": "Manages",
+  "cb.l.features": "Features", "cb.l.have": "Already has", "cb.l.auto": "Automate", "cb.l.tools": "Works with", "cb.l.help": "Needs",
+  "cb.l.access": "Code access", "cb.l.topic": "Topic", "cb.l.urgent": "Urgency", "cb.l.when": "Timeline", "cb.l.how": "How we start",
+  "cb.l.question": "Question", "cb.l.note": "Note",
+})
+
 TAGS = "title|a|span|p|h1|h2|h3|h4|li|div|b|em|dt|dd"
 
 
