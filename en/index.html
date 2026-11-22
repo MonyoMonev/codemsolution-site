@@ -58,7 +58,6 @@ h1,h2,h3{font-family:var(--fd);margin:0;font-weight:600;letter-spacing:-.02em;li
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
 .tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.tag::before{content:"";width:7px;height:7px;background:currentColor;border-radius:2px;transform:rotate(45deg)}
 svg{display:block}
 
 /* ---------- бутони ---------- */
@@ -369,7 +368,6 @@ html.no-motion .svc-static .cap{opacity:1;background:#fff;border-radius:22px;pad
   .hero-copy{top:84px;text-align:left;padding:0 20px}
   .hero-copy h1{font-size:clamp(22px,6.9vw,36px);margin:12px 0 0;max-width:none;text-wrap:initial}
   .hero-copy h1 .l{white-space:nowrap}
-  html[lang="en"] .hero-copy h1{font-size:min(36px,calc((100vw - 44px) / 16.8))}
   .hero-copy p{margin:12px 0 0;font-size:15.5px}
   .hero-actions{justify-content:flex-start;margin-top:18px;gap:10px}
   .hero-actions .btn{padding:13px 20px;font-size:13.5px}
@@ -425,8 +423,7 @@ html.no-motion .svc-static .cap{opacity:1;background:#fff;border-radius:22px;pad
    =================================================================== */
 .marquee{background:var(--ink);color:#fff;overflow:hidden;padding:20px 0;position:relative;z-index:2}
 .marquee .track{display:flex;width:max-content;animation:mq 32s linear infinite}
-.marquee span{font-family:var(--fd);font-weight:600;font-size:15px;letter-spacing:.04em;padding:0 26px;display:flex;align-items:center;gap:26px;white-space:nowrap}
-.marquee span::after{content:"";width:8px;height:8px;border-radius:3px;background:var(--accent);transform:rotate(45deg)}
+.marquee span{font-family:var(--fd);font-weight:600;font-size:15px;letter-spacing:.04em;padding:0 40px;display:flex;align-items:center;white-space:nowrap}
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* ===================================================================
@@ -486,8 +483,17 @@ html.no-motion .svc-static .cap{opacity:1;background:#fff;border-radius:22px;pad
 .can-col li{padding:15px 0;border-top:1px solid rgba(14,27,46,.1)}
 .can-col li b{display:block;font-weight:600;font-size:16px;color:var(--ink);line-height:1.35}
 .can-col li span{display:block;margin-top:3px;font-size:14.5px;line-height:1.5;color:var(--muted)}
-.can-tech{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap;margin-top:26px}
-.can-tech .lbl{font-family:var(--fd);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.can-extra{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:16px 40px;align-items:center;padding:28px clamp(22px,2.6vw,38px) 30px;border-top:1px solid rgba(14,27,46,.1)}
+.can-extra b{display:block;font-family:var(--fd);font-weight:600;font-size:clamp(17px,1.5vw,20px);letter-spacing:-.02em;line-height:1.25;color:var(--ink)}
+.can-extra span{display:block;margin-top:6px;font-size:15px;line-height:1.55;color:var(--muted);max-width:66ch}
+.can-extra ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;max-width:330px}
+.can-extra li{font-size:13.5px;font-weight:600;padding:7px 13px;border-radius:999px;background:#fff;color:var(--ink)}
+@media(max-width:860px){.can-extra{grid-template-columns:1fr;padding:24px 22px 26px}.can-extra ul{justify-content:flex-start;max-width:none}}
+.can-tech{margin-top:26px;background:#fff;border-radius:28px;padding:30px clamp(22px,2.6vw,38px) 12px;box-shadow:0 0 0 1px rgba(14,27,46,.06)}
+.can-tech .lbl{display:block;font-family:var(--fd);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.tech-r{display:grid;grid-template-columns:minmax(190px,240px) 1fr;gap:10px 24px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.tech-r b{font-family:var(--fd);font-weight:600;font-size:15px;letter-spacing:-.01em;line-height:1.3;color:var(--ink)}
+@media(max-width:860px){.can-tech{border-radius:24px;padding:24px 22px 6px}.tech-r{grid-template-columns:1fr;padding:16px 0 18px}}
 .can-tech ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .can-tech li{font-size:13.5px;font-weight:600;padding:7px 13px;border-radius:999px;background:rgba(14,27,46,.06);color:var(--ink)}
 @media(max-width:860px){
@@ -689,6 +695,7 @@ html.cb-open .cb-launch{opacity:0;visibility:hidden;pointer-events:none;transiti
 .ct-btn{margin-top:30px}
 .contact .btn-accent::before{background:#fff}.contact .btn-accent:hover{color:var(--ink)}
 .ct-item + .ct-item{margin-top:30px}
+.ct-item .big2{margin-top:12px}
 .ct-item .lbl{display:block;font-family:var(--fd);font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8F9DB5;margin-bottom:8px}
 .big{display:inline-block;font-family:var(--fd);font-weight:600;font-size:clamp(18px,1.95vw,28px);color:#fff;position:relative;white-space:nowrap}
 .big::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
@@ -741,10 +748,10 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
   <div class="hero-copy">
     <span class="tag" data-i18n="hero.tag">Software development</span>
     <h1>
-      <span class="l" data-i18n="hero.l1">Software made to measure</span>
-      <em class="l" data-i18n="hero.l2">for your company.</em>
+      <span class="l" data-i18n="hero.l1">Software that</span>
+      <em class="l" data-i18n="hero.l2">works for you.</em>
     </h1>
-    <p data-i18n="hero.p">We build business systems, mobile apps and websites, and automate the work your team still does by hand. Scroll down to see what it looks like from the inside.</p>
+    <p data-i18n="hero.p">We build business systems, mobile apps and websites. Scroll down to see what they look like from the inside.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-ink magnetic" data-inq><span data-i18n="hero.cta1">Let's talk about your project</span></a>
       <a href="#services" class="btn btn-line magnetic" id="enterBtn"><span data-i18n="hero.cta2">See inside</span></a>
@@ -1015,10 +1022,19 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
           <li><b data-i18n="can.w8">Animations and seasonal campaigns</b><span data-i18n="can.w8d">Scroll effects and separate pages for promotions.</span></li>
         </ul>
       </div>
+      <!-- работим с професионален фотограф: важи и за сайтовете, и за системите -->
+      <div class="can-extra">
+        <div><b data-i18n="can.ph">Professional photography</b><span data-i18n="can.phd">We work with a professional photographer. If your website or system needs photos or video of your products, premises or team, we add the shoot to the quote.</span></div>
+        <ul><li data-i18n="can.ph1">Products</li><li data-i18n="can.ph2">Interiors</li><li data-i18n="can.ph3">Team</li><li data-i18n="can.ph4">Drone shots</li><li data-i18n="can.ph5">Video</li></ul>
+      </div>
     </div>
     <div class="can-tech rv">
       <span class="lbl" data-i18n="tech.tag">Technology</span>
-      <ul><li>React Native</li><li>Expo</li><li>Next.js</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li></ul>
+      <div class="tech-r"><b data-i18n="tech.g1">Mobile apps</b><ul><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Apple HealthKit</li><li>Live Activities</li><li>Push Notifications</li></ul></div>
+      <div class="tech-r"><b data-i18n="tech.g2">Websites and web systems</b><ul><li>Next.js</li><li>React</li><li>Node.js</li><li>GSAP</li></ul></div>
+      <div class="tech-r"><b data-i18n="tech.g3">Data and backend</b><ul><li>PostgreSQL</li><li>Supabase</li><li>Edge Functions</li><li>Realtime</li><li>Row Level Security</li></ul></div>
+      <div class="tech-r"><b data-i18n="tech.g4">Services and integrations</b><ul><li>Google Maps</li><li>App Store</li><li>Google Play</li><li>RevenueCat</li><li>Sign in with Apple</li><li>Google Sign In</li><li>OpenAI</li><li>Resend</li><li>Sentry</li></ul></div>
+      <div class="tech-r"><b data-i18n="tech.g5">Testing and delivery</b><ul><li>Jest</li><li>Playwright</li><li>GitHub</li><li>EAS Build</li><li>Vercel</li></ul></div>
     </div>
     <!-- началото на помощния чат: въпросът и отговорите се попълват от дървото в последния скрипт -->
     <div class="cb-start" id="cbStart" hidden>
@@ -1045,7 +1061,7 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
     <div class="why-list">
       <div class="wi"><div class="k">01</div><h3 data-i18n="why.1h">You work directly with the developer</h3><p data-i18n="why.1p">Your questions go straight to the person who writes the code. There are no salespeople or middlemen in between.</p></div>
       <div class="wi"><div class="k">02</div><h3 data-i18n="why.2h">Price and deadline agreed in advance</h3><p data-i18n="why.2p">You get them in writing before we start. If the scope doesn't change, the price stays the same.</p></div>
-      <div class="wi"><div class="k">03</div><h3 data-i18n="why.3h">A reply within one working day</h3><p data-i18n="why.3p">We answer an enquiry, a question or a note on the project within one working day.</p></div>
+      <div class="wi"><div class="k">03</div><h3 data-i18n="why.3h">We speak plain language</h3><p data-i18n="why.3p">We explain our decisions without technical jargon, so you know what you are getting and why.</p></div>
       <div class="wi"><div class="k">04</div><h3 data-i18n="why.4h">One team for the whole solution</h3><p data-i18n="why.4p">The system, the mobile app and the website are built by one team and work together. You don't have to coordinate several contractors.</p></div>
       <div class="wi"><div class="k">05</div><h3 data-i18n="why.5h">We stay after launch</h3><p data-i18n="why.5p">We maintain what we build: we update it, add new features and fix problems that come up.</p></div>
     </div>
@@ -1082,6 +1098,7 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
       <details><summary><span data-i18n="faq.q5">Can you connect the new system to the software we already use?</span><i></i></summary><p data-i18n="faq.a5">In most cases, yes. Before the quote we check what connection options each tool offers and tell you what is possible.</p></details>
       <details><summary><span data-i18n="faq.q6">Do you work with clients remotely?</span><i></i></summary><p data-i18n="faq.a6">Yes. Conversations and reviews of the work happen online, and we meet in person when needed.</p></details>
       <details><summary><span data-i18n="faq.q7">What happens after launch?</span><i></i></summary><p data-i18n="faq.a7">We take over the maintenance: we keep the product running, update it and add new features when you need them. The terms are agreed together with the project.</p></details>
+      <details><summary><span data-i18n="faq.q8">We don't have good photos for the website. Can you help?</span><i></i></summary><p data-i18n="faq.a8">Yes. We work with a professional photographer who shoots your products, premises and team. If you wish, we add the shoot to the quote together with the rest of the work.</p></details>
     </div>
   </div>
 </section>
@@ -1092,12 +1109,12 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
     <div>
       <span class="tag" data-i18n="ct.tag">Contact</span>
       <h2 class="rv" data-i18n="ct.h2">Let's talk.</h2>
-      <p class="lead rv" data-i18n="ct.lead">Call or write to us. We reply within one working day.</p>
+      <p class="lead rv" data-i18n="ct.lead">Call or write to us. We reply as soon as we can.</p>
       <a href="mailto:office@codemsolution.com" class="btn btn-accent ct-btn rv" data-inq><span data-i18n="ct.btn">Send an enquiry</span></a>
     </div>
     <div class="ct-links rv">
       <div class="ct-item"><span class="lbl" data-i18n="ct.mail">Email</span><a class="big" href="mailto:office@codemsolution.com">office@codemsolution.com</a></div>
-      <div class="ct-item"><span class="lbl" data-i18n="ct.tel">Phone</span><a class="big" href="tel:+359895552487">+359 89 555 2487</a></div>
+      <div class="ct-item"><span class="lbl" data-i18n="ct.tel">Phone</span><a class="big" href="tel:+359895552487">+359 89 555 2487</a><br><a class="big big2" href="tel:+359893315968">+359 89 331 5968</a></div>
     </div>
   </div>
 </section>
@@ -1116,7 +1133,7 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
     <div class="inq-form" id="inqStep1">
       <span class="tag" data-i18n="inq.tag">Enquiry</span>
       <h2 id="inqT" data-i18n="inq.h">Tell us about your project.</h2>
-      <p class="inq-lead" data-i18n="inq.p">Fill in a few lines and we will get back to you within one working day.</p>
+      <p class="inq-lead" data-i18n="inq.p">Fill in a few lines and we will get back to you as soon as we can.</p>
       <form id="inqForm" novalidate>
         <div class="f"><span class="lbl" data-i18n="inq.what">What do you need</span>
           <div class="inq-chips"><label><input type="checkbox" name="need"><span data-i18n="inq.w1">Business system</span></label><label><input type="checkbox" name="need"><span data-i18n="inq.w2">Mobile app</span></label><label><input type="checkbox" name="need"><span data-i18n="inq.w3">Website</span></label><label><input type="checkbox" name="need"><span data-i18n="inq.w4">Automation</span></label><label><input type="checkbox" name="need"><span data-i18n="inq.w5">Not sure yet</span></label></div>
@@ -1140,7 +1157,7 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
     <div class="inq-ok" id="inqStep2" hidden>
       <div class="ok-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></div>
       <h2 data-i18n="inq.okh">Thank you.</h2>
-      <p data-i18n="inq.okp">We have received your enquiry and will get back to you within one working day.</p>
+      <p data-i18n="inq.okp">We have received your enquiry and will get back to you as soon as we can.</p>
       <button class="btn btn-ink" type="button" data-inq-close><span data-i18n="inq.close">Close</span></button>
     </div>
   </aside>
@@ -1185,7 +1202,7 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
   <span data-i18n="cb.sum.tag">What we noted</span>
   <span data-i18n="cb.sum.go">Leave your contact details</span>
   <span data-i18n="cb.sum.edit">Change something</span>
-  <span data-i18n="cb.form.say">Leave your name and email and we will get back to you within one working day.</span>
+  <span data-i18n="cb.form.say">Leave your name and email and we will get back to you as soon as we can.</span>
   <span data-i18n="cb.done.h">Thank you, {name}.</span>
   <span data-i18n="cb.done.new">New enquiry</span>
 
@@ -1272,7 +1289,7 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
   <span data-i18n="cb.q.ask.topic">What would you like to ask?</span>
   <span data-i18n="cb.o.ask.other">I will write my question</span>
   <span data-i18n="cb.q.ask.more">If you would like us to go into detail for your case, write it here.</span>
-  <span data-i18n="cb.q.ask.q">Write your question and we will answer within one working day.</span>
+  <span data-i18n="cb.q.ask.q">Write your question and we will answer as soon as we can.</span>
   <span data-i18n="cb.ph.ask">Your question</span>
 
   <span data-i18n="cb.q.when">When do you need it?</span>
@@ -1775,7 +1792,8 @@ html.no-motion .steps-line i{transform:none}html.no-motion .step::before{backgro
       { v: 'stores', label: 'faq.q4', say: 'faq.a4', next: 'ask.more' },
       { v: 'links', label: 'faq.q5', say: 'faq.a5', next: 'ask.more' },
       { v: 'remote', label: 'faq.q6', say: 'faq.a6', next: 'ask.more' },
-      { v: 'after', label: 'faq.q7', say: 'faq.a7', next: 'ask.more' } ] },
+      { v: 'after', label: 'faq.q7', say: 'faq.a7', next: 'ask.more' },
+      { v: 'photos', label: 'faq.q8', say: 'faq.a8', next: 'ask.more' } ] },
     { id: 'ask.more', key: 'question', q: 'cb.q.ask.more', type: 'text', optional: true, placeholder: 'cb.ph.ask', next: 'summary' },
     { id: 'ask.q', key: 'question', q: 'cb.q.ask.q', type: 'text', placeholder: 'cb.ph.ask', next: 'summary' },
 

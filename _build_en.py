@@ -134,6 +134,12 @@ EN.update({
   "proc.4p": "We publish the product, show your team how to use it and take over the maintenance.",
   "proc.4g": "A finished product and maintenance",
   "tech.tag": "Technology",
+  "can.ph": "Professional photography",
+  "can.phd": "We work with a professional photographer. If your website or system needs photos or video of your products, premises or team, we add the shoot to the quote.",
+  "can.ph1": "Products", "can.ph2": "Interiors", "can.ph3": "Team", "can.ph4": "Drone shots", "can.ph5": "Video",
+  "faq.q8": "We don't have good photos for the website. Can you help?",
+  "faq.a8": "Yes. We work with a professional photographer who shoots your products, premises and team. If you wish, we add the shoot to the quote together with the rest of the work.",
+  "tech.g1": "Mobile apps", "tech.g2": "Websites and web systems", "tech.g3": "Data and backend", "tech.g4": "Services and integrations", "tech.g5": "Testing and delivery",
   "faq.tag": "Questions",
   "faq.h2": "Frequently asked questions.",
   "faq.q1": "How much does a project cost?",
@@ -287,6 +293,19 @@ EN.update({
   "cb.l.features": "Features", "cb.l.have": "Already has", "cb.l.auto": "Automate", "cb.l.tools": "Works with", "cb.l.help": "Needs",
   "cb.l.access": "Code access", "cb.l.topic": "Topic", "cb.l.urgent": "Urgency", "cb.l.when": "Timeline", "cb.l.how": "How we start",
   "cb.l.question": "Question", "cb.l.note": "Note",
+})
+
+# --- 22.11.2026: по-кратко начало; без обещание за отговор до един работен ден (Моньо: не можем толкова бързо) ---
+EN.update({
+  "hero.l1": "Software that", "hero.l2": "works for you.",
+  "hero.p": "We build business systems, mobile apps and websites. Scroll down to see what they look like from the inside.",
+  "why.3h": "We speak plain language",
+  "why.3p": "We explain our decisions without technical jargon, so you know what you are getting and why.",
+  "ct.lead": "Call or write to us. We reply as soon as we can.",
+  "inq.p": "Fill in a few lines and we will get back to you as soon as we can.",
+  "inq.okp": "We have received your enquiry and will get back to you as soon as we can.",
+  "cb.form.say": "Leave your name and email and we will get back to you as soon as we can.",
+  "cb.q.ask.q": "Write your question and we will answer as soon as we can.",
 })
 
 TAGS = "title|a|span|p|h1|h2|h3|h4|li|div|b|em|dt|dd"
