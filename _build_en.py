@@ -347,7 +347,7 @@ def build():
     HEAD = [
       ('<link rel="canonical" href="https://codemsolution.com/">', '<link rel="canonical" href="https://codemsolution.com/en/">'),
       ('<meta property="og:url" content="https://codemsolution.com/">', '<meta property="og:url" content="https://codemsolution.com/en/">'),
-      ('<meta property="og:image" content="https://codemsolution.com/assets/img/og.png?v=2">', '<meta property="og:image" content="https://codemsolution.com/assets/img/og-en.png?v=2">'),
+      ('<meta property="og:image" content="https://codemsolution.com/assets/img/og.png?v=3">', '<meta property="og:image" content="https://codemsolution.com/assets/img/og-en.png?v=3">'),
       ('"legalName": "СИМБИ25 ЕООД"', '"legalName": "SIMBI25 EOOD"'),
       ('"streetAddress": "ул. Ивайло 82", "addressLocality": "Варна"', '"streetAddress": "ul. Ivaylo 82", "addressLocality": "Varna"'),
       ('"name": "България"', '"name": "Bulgaria"'),
